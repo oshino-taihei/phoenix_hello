@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :phoenix_hello, PhoenixHello.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "phoenix_hello_dev",
+  password: "phoenix_hello_dev",
   database: "phoenix_hello_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
