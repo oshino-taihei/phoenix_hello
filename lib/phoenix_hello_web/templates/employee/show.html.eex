@@ -1,0 +1,23 @@
+<h1>Show Employee</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @employee.name %>
+  </li>
+
+  <li>
+    <strong>Gender:</strong>
+    <%= @employee.gender %>
+  </li>
+
+  <li>
+    <strong>Birthday:</strong>
+    <%= @employee.birthday %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.employee_path(@conn, :edit, @employee) %></span>
+<span><%= link "Back", to: Routes.employee_path(@conn, :index) %></span>

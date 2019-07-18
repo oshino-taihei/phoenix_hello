@@ -1,0 +1,32 @@
+<h1>Listing Employees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for employee <- @employees do %>
+    <tr>
+      <td><%= employee.name %></td>
+      <td><%= if employee.department do employee.department.name else "-" end %></td>
+      <td><%= employee.gender %></td>
+      <td><%= employee.birthday %></td>
+
+      <td>
+        <%= link "Show", to: Routes.employee_path(@conn, :show, employee) %>
+        <%= link "Edit", to: Routes.employee_path(@conn, :edit, employee) %>
+        <%= link "Delete", to: Routes.employee_path(@conn, :delete, employee), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Employee", to: Routes.employee_path(@conn, :new) %></span>
