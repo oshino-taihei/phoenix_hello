@@ -8,6 +8,11 @@
   </li>
 
   <li>
+    <strong>Department:</strong>
+    <%= if @employee.department do @employee.department.name else "-" end %>
+  </li>
+
+  <li>
     <strong>Gender:</strong>
     <%= @employee.gender %>
   </li>
