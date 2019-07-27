@@ -5,15 +5,19 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
+  <%= label f, :名前 %>
   <%= text_input f, :name %>
   <%= error_tag f, :name %>
 
-  <%= label f, :gender %>
+  <%= label f, :組織 %>
+  <%= select f, :department_id, select_list(@departments) %>
+  <%= error_tag f, :department_id %>
+
+  <%= label f, :性別 %>
   <%= text_input f, :gender %>
   <%= error_tag f, :gender %>
 
-  <%= label f, :birthday %>
+  <%= label f, :生年月日 %>
   <%= date_select f, :birthday %>
   <%= error_tag f, :birthday %>
 

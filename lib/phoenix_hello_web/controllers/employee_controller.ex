@@ -11,7 +11,8 @@ defmodule PhoenixHelloWeb.EmployeeController do
 
   def new(conn, _params) do
     changeset = Organization.change_employee(%Employee{})
-    render(conn, "new.html", changeset: changeset)
+    departments = Organization.list_departments()
+    render(conn, "new.html", departments: departments, changeset: changeset)
   end
 
   def create(conn, %{"employee" => employee_params}) do
@@ -33,8 +34,9 @@ defmodule PhoenixHelloWeb.EmployeeController do
 
   def edit(conn, %{"id" => id}) do
     employee = Organization.get_employee!(id)
+    departments = Organization.list_departments()
     changeset = Organization.change_employee(employee)
-    render(conn, "edit.html", employee: employee, changeset: changeset)
+    render(conn, "edit.html", employee: employee, departments: departments, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "employee" => employee_params}) do
