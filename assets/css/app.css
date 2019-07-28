@@ -1,3 +1,6 @@
 /* This file is for your main application css. */
 
+@import "../node_modules/material-dashboard/assets/css/material-dashboard.css";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css";
 @import "./phoenix.css";

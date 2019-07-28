@@ -2,24 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>PhoenixHello · Phoenix Framework</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
-        </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+    <header></header>
+
+    <div class="sidebar" data-color="azure" data-background-color="white">
+      <div class="logo">
+        <a href="/" class="simple-text logo-normal">
+          Phoenix Hello
         </a>
-      </section>
-    </header>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="/employees">
+              <i class="material-icons">person</i>
+              <p>Employees</p>
+            </a>
+          </li>
+          <li class="nav-item active  ">
+            <a class="nav-link" href="/departments">
+              <i class="material-icons">domain</i>
+              <p>Departments</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <div class="sidebar-background"></div></div>
+
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
