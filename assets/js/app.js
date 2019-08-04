@@ -16,4 +16,9 @@ import "phoenix_html"
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
-import "material-dashboard"
+// Material Dashboard
+import "../node_modules/material-dashboard/assets/js/core/bootstrap-material-design.min.js"
+import "../node_modules/material-dashboard/assets/js/plugins/perfect-scrollbar.jquery.min.js"
+import "../node_modules/material-dashboard/assets/js/plugins/chartist.min.js"
+import "../node_modules/material-dashboard/assets/js/plugins/bootstrap-notify.js"
+import "../node_modules/material-dashboard/assets/js/material-dashboard.js"
