@@ -17,9 +17,6 @@ defmodule PhoenixHelloWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/hello", HelloController, :index
-    get "/hello/:messenger", HelloController, :show
-    resources "/posts", PostController
     resources "/departments", DepartmentController
     resources "/employees", EmployeeController
   end
